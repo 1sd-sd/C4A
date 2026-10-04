@@ -2,6 +2,8 @@
 
 > **挑战**：C4A 技能提交自动评审（Automated Skill Submission Evaluator）｜ challenge_id `ch-20260717031432-5jvqje`
 > **作者**：lishengdan ｜ **完成级别**：Level 1–4 全部 ｜ **日期**：2026-10-04
+>
+> 仓库：<https://github.com/1sd-sd/C4A>（Public，main 分支）
 
 ---
 
@@ -19,6 +21,9 @@
 ## 30 秒跑起来
 
 ```bash
+# 0. 拿到成果
+git clone https://github.com/1sd-sd/C4A.git && cd C4A
+
 # 一键复现全部产物（报告 / 自测 / demo / 技能包 / 脱敏自检）；无 pillow 时加 --no-demo
 python lishengdan_C4A_复现脚本.py
 
