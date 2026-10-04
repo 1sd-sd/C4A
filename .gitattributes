@@ -1,0 +1,46 @@
+# ============================================================
+# 行尾策略：默认 `-text`，全仓库不做任何行尾转换，逐字节入库。
+#
+# 为什么对本仓库是硬要求：
+#
+#   1) lishengdan_C4A_skill-evaluator.skill 是一个 zip 包，它就是从
+#      src/c4-skill-evaluator/ 打包出来的。入库前已用 sha256 逐成员校验：
+#      **包内 51 个成员与 src 对应文件 51/51 逐字节一致**（zipfile.testzip() 亦无损坏）。
+#      本机 core.autocrlf = true，若不显式压制，git 会把 CRLF→LF 写进索引，
+#      clone 出来源码变 LF、而包内仍是磁盘原样，
+#      "从源码可重建出字节完全相同的 .skill" 这条性质就失效了 ——
+#      而且在本机完全看不出来，只有别人 clone 后才会暴露。
+#
+#   2) examples/synthetic_corpus/ 下的合成样本是**带标准答案的评测夹具**，
+#      其中的 wangxiao（空壳）、sunqi（含假密钥与硬编码路径）、zhaolei（只交 1 个文件）
+#      都是刻意构造的坏样本，共 27 个文件。字节一变，
+#      ground_truth.json 里记的体积判据与自测断言就会对不上，
+#      "43/43 准确率 / 0% 误判率" 这份证据也就失效了。
+#
+#   3) examples/real_corpus/ 下的 4 份真实材料（含 3 个 .skill 包）是 hold-out 回归语料，
+#      同样是逐字节证据。
+# ============================================================
+
+* -text
+
+# 显式声明二进制，防止将来有人误改成 text 而触发转换
+*.skill   binary
+*.zip     binary
+*.tar.gz  binary
+*.png     binary
+*.jpg     binary
+*.jpeg    binary
+*.gif     binary
+*.pdf     binary
+*.mp4     binary
+
+# 以下按源码/文档对待，但仍为 `-text`（不做转换，按磁盘原样存储），
+# 声明只为让 GitHub 正确识别语言与渲染。
+*.py     -text
+*.md     -text
+*.json   -text
+*.yaml   -text
+*.yml    -text
+*.html   -text
+*.csv    -text
+*.txt    -text

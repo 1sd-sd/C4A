@@ -1,0 +1,286 @@
+{
+  "tool": "challenge-submission-checker",
+  "version": "1.2.0",
+  "generated_at": "2026-10-05 00:10:07",
+  "pack": "D:\\.cogseed\\userWorkSpace\\我的挑战有哪些\\C4A提交成果",
+  "requirement_source": "参考资料\\challenge.json",
+  "challenge_title": "对照：排除测试语料后的 C4A 提交自检",
+  "deadline": "2026-12-31T23:59",
+  "author": "lishengdan",
+  "file_count": 53,
+  "deliverables": [
+    {
+      "token": "*方案设计*",
+      "matched": 1,
+      "files": [
+        "lishengdan_C4A_方案设计.md"
+      ]
+    },
+    {
+      "token": "*skill-evaluator*",
+      "matched": 9,
+      "files": [
+        "lishengdan_C4A_skill-evaluator.skill",
+        "参考资料/c4a-skill-evaluator-starter.zip",
+        "src/c4-skill-evaluator/SKILL.md",
+        "src/c4-skill-evaluator/examples/ground_truth.json",
+        "src/c4-skill-evaluator/examples/make_synthetic_corpus.py",
+        "src/c4-skill-evaluator/examples/run_selftest.py",
+        "src/c4-skill-evaluator/references/c4a_rubric.json",
+        "src/c4-skill-evaluator/references/scoring_guide.md",
+        "src/c4-skill-evaluator/scripts/c4a_evaluate.py"
+      ]
+    },
+    {
+      "token": "*评审报告*",
+      "matched": 7,
+      "files": [
+        "lishengdan_C4A_评审报告.html",
+        "lishengdan_C4A_评审报告.md",
+        "lishengdan_C4A_评审报告_深审版.md",
+        "评审产物/混合层/lishengdan_C4A_评审报告.html",
+        "评审产物/混合层/lishengdan_C4A_评审报告.md",
+        "评审产物/规则层/lishengdan_C4A_评审报告.html",
+        "评审产物/规则层/lishengdan_C4A_评审报告.md"
+      ]
+    },
+    {
+      "token": "*AI日志*",
+      "matched": 1,
+      "files": [
+        "lishengdan_C4A_AI日志.md"
+      ]
+    }
+  ],
+  "file_reports": [
+    {
+      "path": "lishengdan_C4A_AI日志.md",
+      "bytes": 15492,
+      "status": "pass",
+      "notes": [
+        "建议补充章节：提示词"
+      ],
+      "score": 80
+    },
+    {
+      "path": "lishengdan_C4A_skill-evaluator.skill",
+      "bytes": 621951,
+      "status": "pass",
+      "notes": [],
+      "score": 100,
+      "facts": {
+        "entries": 51,
+        "root_dir": "c4-skill-evaluator",
+        "files": [
+          "c4-skill-evaluator/examples/ground_truth.json",
+          "c4-skill-evaluator/examples/make_synthetic_corpus.py",
+          "c4-skill-evaluator/examples/real_corpus/c4a-starter/references/c4_rubric.yaml",
+          "c4-skill-evaluator/examples/real_corpus/c4a-starter/SKILL.md",
+          "c4-skill-evaluator/examples/real_corpus/lishengdan/demo/lishengdan_C4_demo_1_技能自测.png",
+          "c4-skill-evaluator/examples/real_corpus/lishengdan/demo/lishengdan_C4_demo_2_通过场景.png",
+          "c4-skill-evaluator/examples/real_corpus/lishengdan/demo/lishengdan_C4_demo_3_缺失交付物.png",
+          "c4-skill-evaluator/examples/real_corpus/lishengdan/demo/lishengdan_C4_demo_4_脏数据与密钥.png",
+          "c4-skill-evaluator/examples/real_corpus/lishengdan/demo/lishengdan_C4_demo_5_生成报告.png",
+          "c4-skill-evaluator/examples/real_corpus/lishengdan/demo/lishengdan_C4_demo_生成脚本.py",
+          "c4-skill-evaluator/examples/real_corpus/lishengdan/lishengdan_C4_AI日志.md",
+          "c4-skill-evaluator/examples/real_corpus/lishengdan/lishengdan_C4_challenge-submission-checker.skill",
+          "c4-skill-evaluator/examples/real_corpus/lishengdan/lishengdan_C4_skill说明.md",
+          "c4-skill-evaluator/examples/real_corpus/lishengdan/lishengdan_C4_复盘AAR.md",
+          "c4-skill-evaluator/examples/real_corpus/lishengdan/lishengdan_C4_教学说明.md",
+          "c4-skill-evaluator/examples/real_corpus/lishengdan/lishengdan_C4_自检报告.md",
+          "c4-skill-evaluator/examples/real_corpus/lishengdan/README.md",
+          "c4-skill-evaluator/examples/real_corpus/skill-explainer/skill-explainer.skill",
+          "c4-skill-evaluator/examples/real_corpus/wechat-doc-mapper/wechat-doc-mapper.skill",
+          "c4-skill-evaluator/examples/run_selftest.py",
+          "c4-skill-evaluator/examples/synthetic_corpus/chenhao_v1/chenhao_v1_C4_demo截图.png",
+          "c4-skill-evaluator/examples/synthetic_corpus/chenhao_v1/chenhao_v1_C4_folder-digest.skill",
+          "c4-skill-evaluator/examples/synthetic_corpus/chenhao_v1/chenhao_v1_C4_skill说明.md",
+          "c4-skill-evaluator/examples/synthetic_corpus/chenhao_v2/chenhao_v2_C4_AI日志.md",
+          "c4-skill-evaluator/examples/synthetic_corpus/chenhao_v2/chenhao_v2_C4_demo截图.png",
+          "c4-skill-evaluator/examples/synthetic_corpus/chenhao_v2/chenhao_v2_C4_folder-digest.skill",
+          "c4-skill-evaluator/examples/synthetic_corpus/chenhao_v2/chenhao_v2_C4_skill说明.md",
+          "c4-skill-evaluator/examples/synthetic_corpus/chenhao_v2/chenhao_v2_C4_教学说明.md",
+          "c4-skill-evaluator/examples/synthetic_corpus/liming/liming_C4_folder-digest.skill",
+          "c4-skill-evaluator/examples/synthetic_corpus/liming/liming_C4_skill说明.md",
+          "c4-skill-evaluator/examples/synthetic_corpus/liming/liming_C4_教学说明.md",
+          "c4-skill-evaluator/examples/synthetic_corpus/sunqi/sunqi_C4_AI日志.md",
+          "c4-skill-evaluator/examples/synthetic_corpus/sunqi/sunqi_C4_data-export.skill",
+          "c4-skill-evaluator/examples/synthetic_corpus/sunqi/sunqi_C4_demo截图.png",
+          "c4-skill-evaluator/examples/synthetic_corpus/sunqi/sunqi_C4_skill说明.md",
+          "c4-skill-evaluator/examples/synthetic_corpus/sunqi/sunqi_C4_教学说明.md",
+          "c4-skill-evaluator/examples/synthetic_corpus/wangxiao/wangxiao_C4_AI日志.md",
+          "c4-skill-evaluator/examples/synthetic_corpus/wangxiao/wangxiao_C4_demo截图.png",
+          "c4-skill-evaluator/examples/synthetic_corpus/wangxiao/wangxiao_C4_my-skill.skill",
+          "c4-skill-evaluator/examples/synthetic_corpus/wangxiao/wangxiao_C4_skill说明.md",
+          "c4-skill-evaluator/examples/synthetic_corpus/wangxiao/wangxiao_C4_教学说明.md",
+          "c4-skill-evaluator/examples/synthetic_corpus/zhangwei/zhangwei_C4_AI日志.md",
+          "c4-skill-evaluator/examples/synthetic_corpus/zhangwei/zhangwei_C4_demo截图.png",
+          "c4-skill-evaluator/examples/synthetic_corpus/zhangwei/zhangwei_C4_folder-digest.skill",
+          "c4-skill-evaluator/examples/synthetic_corpus/zhangwei/zhangwei_C4_skill说明.md",
+          "c4-skill-evaluator/examples/synthetic_corpus/zhangwei/zhangwei_C4_教学说明.md",
+          "c4-skill-evaluator/examples/synthetic_corpus/zhaolei/zhaolei_C4_skill说明.md",
+          "c4-skill-evaluator/references/c4a_rubric.json",
+          "c4-skill-evaluator/references/scoring_guide.md",
+          "c4-skill-evaluator/scripts/c4a_evaluate.py",
+          "c4-skill-evaluator/SKILL.md"
+        ],
+        "skill_md_lines": 222,
+        "name": "c4-skill-evaluator",
+        "description_len": 683
+      }
+    },
+    {
+      "path": "lishengdan_C4A_方案设计.md",
+      "bytes": 14296,
+      "status": "pass",
+      "notes": [],
+      "score": 100
+    },
+    {
+      "path": "lishengdan_C4A_评审报告.html",
+      "bytes": 15703,
+      "status": "pass",
+      "notes": [],
+      "score": 100
+    },
+    {
+      "path": "lishengdan_C4A_评审报告.md",
+      "bytes": 20606,
+      "status": "pass",
+      "notes": [],
+      "score": 100
+    },
+    {
+      "path": "lishengdan_C4A_评审报告_深审版.md",
+      "bytes": 24369,
+      "status": "pass",
+      "notes": [],
+      "score": 100
+    },
+    {
+      "path": "src/c4-skill-evaluator/examples/ground_truth.json",
+      "bytes": 3296,
+      "status": "pass",
+      "notes": [],
+      "score": 100
+    },
+    {
+      "path": "src/c4-skill-evaluator/examples/make_synthetic_corpus.py",
+      "bytes": 15928,
+      "status": "pass",
+      "notes": [],
+      "score": 100
+    },
+    {
+      "path": "src/c4-skill-evaluator/examples/run_selftest.py",
+      "bytes": 12069,
+      "status": "pass",
+      "notes": [],
+      "score": 100
+    },
+    {
+      "path": "src/c4-skill-evaluator/references/c4a_rubric.json",
+      "bytes": 23334,
+      "status": "pass",
+      "notes": [],
+      "score": 100
+    },
+    {
+      "path": "src/c4-skill-evaluator/references/scoring_guide.md",
+      "bytes": 8399,
+      "status": "pass",
+      "notes": [],
+      "score": 100
+    },
+    {
+      "path": "src/c4-skill-evaluator/scripts/c4a_evaluate.py",
+      "bytes": 68575,
+      "status": "pass",
+      "notes": [],
+      "score": 100
+    },
+    {
+      "path": "src/c4-skill-evaluator/SKILL.md",
+      "bytes": 7562,
+      "status": "pass",
+      "notes": [],
+      "score": 100
+    },
+    {
+      "path": "参考资料/c4a-skill-evaluator-starter.zip",
+      "bytes": 6812,
+      "status": "pass",
+      "notes": [],
+      "score": 100
+    },
+    {
+      "path": "评审产物/混合层/lishengdan_C4A_评审报告.html",
+      "bytes": 15847,
+      "status": "pass",
+      "notes": [],
+      "score": 100
+    },
+    {
+      "path": "评审产物/混合层/lishengdan_C4A_评审报告.md",
+      "bytes": 24369,
+      "status": "pass",
+      "notes": [],
+      "score": 100
+    },
+    {
+      "path": "评审产物/规则层/lishengdan_C4A_评审报告.html",
+      "bytes": 15703,
+      "status": "pass",
+      "notes": [],
+      "score": 100
+    },
+    {
+      "path": "评审产物/规则层/lishengdan_C4A_评审报告.md",
+      "bytes": 20606,
+      "status": "pass",
+      "notes": [],
+      "score": 100
+    }
+  ],
+  "naming_issues": [
+    "src/c4-skill-evaluator/examples/ground_truth.json",
+    "src/c4-skill-evaluator/examples/make_synthetic_corpus.py",
+    "src/c4-skill-evaluator/examples/run_selftest.py",
+    "src/c4-skill-evaluator/references/c4a_rubric.json",
+    "src/c4-skill-evaluator/references/scoring_guide.md",
+    "src/c4-skill-evaluator/scripts/c4a_evaluate.py",
+    "src/c4-skill-evaluator/SKILL.md",
+    "参考资料/c4a-skill-evaluator-starter.zip"
+  ],
+  "junk": [],
+  "secrets": [],
+  "scores": {
+    "deliverables": 100.0,
+    "content": 97.5,
+    "hygiene": 100.0,
+    "safety": 100.0
+  },
+  "weights": {
+    "deliverables": 35,
+    "content": 25,
+    "hygiene": 10,
+    "safety": 10
+  },
+  "total": 99.2,
+  "verdict": "PASS",
+  "blocking": [],
+  "warnings": [
+    "命名未包含作者标识「lishengdan」：src/c4-skill-evaluator/examples/ground_truth.json",
+    "命名未包含作者标识「lishengdan」：src/c4-skill-evaluator/examples/make_synthetic_corpus.py",
+    "命名未包含作者标识「lishengdan」：src/c4-skill-evaluator/examples/run_selftest.py",
+    "命名未包含作者标识「lishengdan」：src/c4-skill-evaluator/references/c4a_rubric.json",
+    "命名未包含作者标识「lishengdan」：src/c4-skill-evaluator/references/scoring_guide.md",
+    "命名未包含作者标识「lishengdan」：src/c4-skill-evaluator/scripts/c4a_evaluate.py",
+    "命名未包含作者标识「lishengdan」：src/c4-skill-evaluator/SKILL.md",
+    "命名未包含作者标识「lishengdan」：参考资料/c4a-skill-evaluator-starter.zip"
+  ],
+  "excluded": [
+    "src/c4-skill-evaluator/examples/real_corpus",
+    "src/c4-skill-evaluator/examples/synthetic_corpus"
+  ]
+}

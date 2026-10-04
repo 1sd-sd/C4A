@@ -1,0 +1,81 @@
+{
+  "_provenance": {
+    "generated_by": "CodeBuddy 内置大模型（Claude 系），依据 llm_prompt.md 中规则层给出的证据逐条复核",
+    "generated_at": "2026-10-04",
+    "note": "不是脚本 mock 的假结论，而是真的读代码后作出的判断；3 处改判均有可复核的实证依据（见 rationale）。"
+  },
+  "authors": {
+    "lishengdan": {
+      "reusable": {
+        "rating": "partial",
+        "rationale": "与规则层一致：技能本体零依赖可移植，但 demo 生成脚本硬编码 C:\\Windows\\Fonts\\simhei.ttf，换机器复跑 demo 会失败；文档另有 9 处本机路径示例。"
+      },
+      "executable": {
+        "rating": "pass",
+        "rationale": "与规则层一致：.skill 实测可解压（18 条目含 SKILL.md），3 个 Python 文件均 compile() 通过，frontmatter 的 description 达 1024 字符。"
+      },
+      "verifiable": {
+        "rating": "pass",
+        "rationale": "与规则层一致：自带 examples/run_selftest.py 断言式自测，且给出 91.8/69.5/36.3 三组具体预期分数与退出码。"
+      },
+      "clear_io": {
+        "rating": "pass",
+        "rationale": "与规则层一致：「输入一个文件夹，输出缺什么/错什么/几分/能不能交」一行式说明明确，并单列边界情况。"
+      }
+    },
+    "skill-explainer": {
+      "reusable": {
+        "rating": "partial",
+        "rationale": "与规则层一致：完全不提安装与使用环境，且硬编码 /mnt/skills/user|public|examples 三个搜索路径。"
+      },
+      "executable": {
+        "rating": "partial",
+        "rationale": "【改判：规则层 ✅ → LLM ⚠️】代码与事实不符，实际跑不通：SKILL.md 声明 .skill 是『tar.gz archive』并用 tarfile.open(p,'r:gz') 解包，但实测 .skill 文件头是 PK\\x03\\x04（zip），tarfile 直接抛 ReadError: not a gzip file。Step 1『Resolve and unpack the skill』必失败。规则层只验证了『包本身合法』，没有验证『代码与包格式是否自洽』——这是纯规则层的盲区。实测证据见 AI 日志第 6 轮。"
+      },
+      "verifiable": {
+        "rating": "partial",
+        "rationale": "与规则层一致：文档说明了评定维度与建议优先级，但没有可复跑的自测或预期输出样例，也无 demo。"
+      },
+      "clear_io": {
+        "rating": "pass",
+        "rationale": "与规则层一致：Input 一节与 Output 一节完整无歧义。"
+      }
+    },
+    "wechat-doc-mapper": {
+      "reusable": {
+        "rating": "fail",
+        "rationale": "【改判：规则层 ⚠️ → LLM ❌】比规则层更有据可依地更严：脚本默认输出路径写死为 /mnt/user-data/outputs/elite20_doc_map.xlsx，SKILL.md 明确依赖沙箱内的 /mnt/skills/public/xlsx/SKILL.md 与 file-reading/SKILL.md，并硬依赖 openpyxl/pypdf/python-pptx/pandas 四个第三方库而全文没有一行安装说明。普通用户拿到后无法运行，属『不可复用』而非『部分可复用』。"
+      },
+      "executable": {
+        "rating": "pass",
+        "rationale": "与规则层一致：包结构合法，wechat_doc_mapper.py 能通过 compile()，工作流分步明确。"
+      },
+      "verifiable": {
+        "rating": "partial",
+        "rationale": "与规则层一致：给了输出格式规范，但没有测试用例、没有预期结果、没有 demo，无法判断跑出来对不对。"
+      },
+      "clear_io": {
+        "rating": "pass",
+        "rationale": "【改判：规则层 ⚠️ → LLM ✅】这是规则层的语言盲区：该技能的 Input/Outputs 定义得相当清楚（『一个本地文件夹路径』→『Markdown 汇总表 + xlsx 文件』），只是全用英文书写，而规则层的 IO 信号词只有中文『输入/输出』。纯关键词方案对英文提交会系统性低估。"
+      }
+    },
+    "c4a-starter": {
+      "reusable": {
+        "rating": "pass",
+        "rationale": "与规则层一致：明确要求 Python 3 + openpyxl/pypdf/python-pptx/pyyaml，并说明了对不规范命名的回退策略。"
+      },
+      "executable": {
+        "rating": "pass",
+        "rationale": "与规则层一致：SKILL.md 有 Step 1–4 的有序工作流，frontmatter 完整（description 683 字符）。但它只是脚手架，正文自己写了『This SKILL.md is a starter scaffold, not a finished skill』。"
+      },
+      "verifiable": {
+        "rating": "partial",
+        "rationale": "与规则层一致：给了报告模板但没有测试用例，也没有任何一次真实运行的预期输出。"
+      },
+      "clear_io": {
+        "rating": "pass",
+        "rationale": "与规则层一致：每个 Step 都写明输出结构（如 Dict[author_name, List[file_info]]）。"
+      }
+    }
+  }
+}

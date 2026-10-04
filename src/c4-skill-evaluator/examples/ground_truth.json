@@ -1,0 +1,64 @@
+{
+  "version": "1.1.0",
+  "profile": "c4_four_conditions",
+  "note": "合成评测集的标准答案。期望值全部由 references/scoring_guide.md 里公开的规则手工推导（检查项通过数 → 得分率 → 评级阈值 0.8/0.4，关键项失守则最高 ⚠️），不是照抄评审器输出。",
+  "calibration_log": [
+    "v1.0 → v1.1：初始版本把『每个夹具期望的维度评级』按直觉填写，自测准确率仅 68.8%。",
+    "逐条复盘后发现 10 处偏差根因：(a) 期望值未按公开规则推导；(b) 评审器 3 个真实缺陷（.skill 未视为强证据 / 扩展名未硬过滤 / 无关键项否决）。",
+    "两者都修：规则缺陷修代码，期望值按 rules 重推。修订过程见 AI 日志第 5 轮。"
+  ],
+  "fixtures": {
+    "zhangwei": {
+      "intent": "齐全且高质量：四条件全达标，无红旗",
+      "present": 5,
+      "must_flags": [],
+      "forbid_flags": ["hollow_file", "fake_package", "secret_leak", "missing_artifacts", "no_demo", "no_ai_log", "one_shot_ai", "junk_files"],
+      "criteria": { "reusable": "pass", "executable": "pass", "verifiable": "pass", "clear_io": "pass" }
+    },
+    "liming": {
+      "intent": "缺 Demo 与 AI 日志：3/5，可验证因缺 demo（关键项）最高只能 ⚠️",
+      "present": 3,
+      "must_flags": ["missing_artifacts", "no_demo", "no_ai_log"],
+      "forbid_flags": ["secret_leak", "fake_package", "hollow_file"],
+      "criteria": { "reusable": "pass", "executable": "pass", "verifiable": "partial", "clear_io": "pass" }
+    },
+    "wangxiao": {
+      "intent": "表面齐全、实为空壳（反套壳考点）：文档全为占位符、.skill 是伪包",
+      "present": 2,
+      "must_flags": ["hollow_file", "fake_package", "missing_artifacts"],
+      "forbid_flags": ["secret_leak"],
+      "criteria": { "reusable": "fail", "executable": "fail", "verifiable": "fail", "clear_io": "fail" }
+    },
+    "zhaolei": {
+      "intent": "只交 1 个文件：1/5，但交的那份本身质量达标",
+      "present": 1,
+      "must_flags": ["missing_artifacts", "no_demo", "no_ai_log"],
+      "forbid_flags": ["secret_leak", "fake_package", "hollow_file"],
+      "criteria": { "reusable": "pass", "clear_io": "pass" }
+    },
+    "sunqi": {
+      "intent": "5/5 齐全，但脚本含硬编码绝对路径与真实密钥（安全考点）",
+      "present": 5,
+      "must_flags": ["secret_leak"],
+      "forbid_flags": ["fake_package", "hollow_file"],
+      "criteria": { "reusable": "partial", "executable": "partial" }
+    },
+    "chenhao_v1": {
+      "intent": "迭代第 1 版：3 类交付物",
+      "present": 3,
+      "must_flags": ["missing_artifacts", "no_ai_log"],
+      "forbid_flags": ["secret_leak", "fake_package", "hollow_file"],
+      "criteria": { "executable": "pass" }
+    },
+    "chenhao_v2": {
+      "intent": "迭代第 2 版：5 类交付物齐全，红旗应全部消失",
+      "present": 5,
+      "must_flags": [],
+      "forbid_flags": ["secret_leak", "missing_artifacts", "no_demo", "no_ai_log", "fake_package", "hollow_file"],
+      "criteria": { "reusable": "pass", "executable": "pass", "verifiable": "pass", "clear_io": "pass" }
+    }
+  },
+  "timeline": [
+    { "base": "chenhao", "expect_delta_positive": true }
+  ]
+}

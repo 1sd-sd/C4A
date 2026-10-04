@@ -1,0 +1,449 @@
+{
+  "accuracy": 1.0,
+  "miss_rate": 0.0,
+  "checks_total": 43,
+  "checks_passed": 43,
+  "threshold": 0.95,
+  "checks": [
+    {
+      "fixture": "zhangwei",
+      "check": "完整性(命中数)",
+      "expected": 5,
+      "actual": 5,
+      "ok": true,
+      "note": "齐全且高质量：四条件全达标，无红旗"
+    },
+    {
+      "fixture": "zhangwei",
+      "check": "红旗-召回(必须命中)",
+      "expected": [],
+      "actual": [],
+      "ok": true,
+      "note": ""
+    },
+    {
+      "fixture": "zhangwei",
+      "check": "红旗-精度(不得误报)",
+      "expected": [
+        "fake_package",
+        "hollow_file",
+        "junk_files",
+        "missing_artifacts",
+        "no_ai_log",
+        "no_demo",
+        "one_shot_ai",
+        "secret_leak"
+      ],
+      "actual": [],
+      "ok": true,
+      "note": ""
+    },
+    {
+      "fixture": "zhangwei",
+      "check": "维度评级:reusable",
+      "expected": "pass",
+      "actual": "pass",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "fixture": "zhangwei",
+      "check": "维度评级:executable",
+      "expected": "pass",
+      "actual": "pass",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "fixture": "zhangwei",
+      "check": "维度评级:verifiable",
+      "expected": "pass",
+      "actual": "pass",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "fixture": "zhangwei",
+      "check": "维度评级:clear_io",
+      "expected": "pass",
+      "actual": "pass",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "fixture": "liming",
+      "check": "完整性(命中数)",
+      "expected": 3,
+      "actual": 3,
+      "ok": true,
+      "note": "缺 Demo 与 AI 日志：3/5，可验证因缺 demo（关键项）最高只能 ⚠️"
+    },
+    {
+      "fixture": "liming",
+      "check": "红旗-召回(必须命中)",
+      "expected": [
+        "missing_artifacts",
+        "no_ai_log",
+        "no_demo"
+      ],
+      "actual": [
+        "missing_artifacts",
+        "no_ai_log",
+        "no_demo"
+      ],
+      "ok": true,
+      "note": ""
+    },
+    {
+      "fixture": "liming",
+      "check": "红旗-精度(不得误报)",
+      "expected": [
+        "fake_package",
+        "hollow_file",
+        "secret_leak"
+      ],
+      "actual": [],
+      "ok": true,
+      "note": ""
+    },
+    {
+      "fixture": "liming",
+      "check": "维度评级:reusable",
+      "expected": "pass",
+      "actual": "pass",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "fixture": "liming",
+      "check": "维度评级:executable",
+      "expected": "pass",
+      "actual": "pass",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "fixture": "liming",
+      "check": "维度评级:verifiable",
+      "expected": "partial",
+      "actual": "partial",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "fixture": "liming",
+      "check": "维度评级:clear_io",
+      "expected": "pass",
+      "actual": "pass",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "fixture": "wangxiao",
+      "check": "完整性(命中数)",
+      "expected": 2,
+      "actual": 2,
+      "ok": true,
+      "note": "表面齐全、实为空壳（反套壳考点）：文档全为占位符、.skill 是伪包"
+    },
+    {
+      "fixture": "wangxiao",
+      "check": "红旗-召回(必须命中)",
+      "expected": [
+        "fake_package",
+        "hollow_file",
+        "missing_artifacts"
+      ],
+      "actual": [
+        "fake_package",
+        "hollow_file",
+        "missing_artifacts"
+      ],
+      "ok": true,
+      "note": ""
+    },
+    {
+      "fixture": "wangxiao",
+      "check": "红旗-精度(不得误报)",
+      "expected": [
+        "secret_leak"
+      ],
+      "actual": [],
+      "ok": true,
+      "note": ""
+    },
+    {
+      "fixture": "wangxiao",
+      "check": "维度评级:reusable",
+      "expected": "fail",
+      "actual": "fail",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "fixture": "wangxiao",
+      "check": "维度评级:executable",
+      "expected": "fail",
+      "actual": "fail",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "fixture": "wangxiao",
+      "check": "维度评级:verifiable",
+      "expected": "fail",
+      "actual": "fail",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "fixture": "wangxiao",
+      "check": "维度评级:clear_io",
+      "expected": "fail",
+      "actual": "fail",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "fixture": "zhaolei",
+      "check": "完整性(命中数)",
+      "expected": 1,
+      "actual": 1,
+      "ok": true,
+      "note": "只交 1 个文件：1/5，但交的那份本身质量达标"
+    },
+    {
+      "fixture": "zhaolei",
+      "check": "红旗-召回(必须命中)",
+      "expected": [
+        "missing_artifacts",
+        "no_ai_log",
+        "no_demo"
+      ],
+      "actual": [
+        "missing_artifacts",
+        "no_ai_log",
+        "no_demo"
+      ],
+      "ok": true,
+      "note": ""
+    },
+    {
+      "fixture": "zhaolei",
+      "check": "红旗-精度(不得误报)",
+      "expected": [
+        "fake_package",
+        "hollow_file",
+        "secret_leak"
+      ],
+      "actual": [],
+      "ok": true,
+      "note": ""
+    },
+    {
+      "fixture": "zhaolei",
+      "check": "维度评级:reusable",
+      "expected": "pass",
+      "actual": "pass",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "fixture": "zhaolei",
+      "check": "维度评级:clear_io",
+      "expected": "pass",
+      "actual": "pass",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "fixture": "sunqi",
+      "check": "完整性(命中数)",
+      "expected": 5,
+      "actual": 5,
+      "ok": true,
+      "note": "5/5 齐全，但脚本含硬编码绝对路径与真实密钥（安全考点）"
+    },
+    {
+      "fixture": "sunqi",
+      "check": "红旗-召回(必须命中)",
+      "expected": [
+        "secret_leak"
+      ],
+      "actual": [
+        "secret_leak"
+      ],
+      "ok": true,
+      "note": ""
+    },
+    {
+      "fixture": "sunqi",
+      "check": "红旗-精度(不得误报)",
+      "expected": [
+        "fake_package",
+        "hollow_file"
+      ],
+      "actual": [],
+      "ok": true,
+      "note": ""
+    },
+    {
+      "fixture": "sunqi",
+      "check": "维度评级:reusable",
+      "expected": "partial",
+      "actual": "partial",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "fixture": "sunqi",
+      "check": "维度评级:executable",
+      "expected": "partial",
+      "actual": "partial",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "fixture": "chenhao_v1",
+      "check": "完整性(命中数)",
+      "expected": 3,
+      "actual": 3,
+      "ok": true,
+      "note": "迭代第 1 版：3 类交付物"
+    },
+    {
+      "fixture": "chenhao_v1",
+      "check": "红旗-召回(必须命中)",
+      "expected": [
+        "missing_artifacts",
+        "no_ai_log"
+      ],
+      "actual": [
+        "missing_artifacts",
+        "no_ai_log"
+      ],
+      "ok": true,
+      "note": ""
+    },
+    {
+      "fixture": "chenhao_v1",
+      "check": "红旗-精度(不得误报)",
+      "expected": [
+        "fake_package",
+        "hollow_file",
+        "secret_leak"
+      ],
+      "actual": [],
+      "ok": true,
+      "note": ""
+    },
+    {
+      "fixture": "chenhao_v1",
+      "check": "维度评级:executable",
+      "expected": "pass",
+      "actual": "pass",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "fixture": "chenhao_v2",
+      "check": "完整性(命中数)",
+      "expected": 5,
+      "actual": 5,
+      "ok": true,
+      "note": "迭代第 2 版：5 类交付物齐全，红旗应全部消失"
+    },
+    {
+      "fixture": "chenhao_v2",
+      "check": "红旗-召回(必须命中)",
+      "expected": [],
+      "actual": [],
+      "ok": true,
+      "note": ""
+    },
+    {
+      "fixture": "chenhao_v2",
+      "check": "红旗-精度(不得误报)",
+      "expected": [
+        "fake_package",
+        "hollow_file",
+        "missing_artifacts",
+        "no_ai_log",
+        "no_demo",
+        "secret_leak"
+      ],
+      "actual": [],
+      "ok": true,
+      "note": ""
+    },
+    {
+      "fixture": "chenhao_v2",
+      "check": "维度评级:reusable",
+      "expected": "pass",
+      "actual": "pass",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "fixture": "chenhao_v2",
+      "check": "维度评级:executable",
+      "expected": "pass",
+      "actual": "pass",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "fixture": "chenhao_v2",
+      "check": "维度评级:verifiable",
+      "expected": "pass",
+      "actual": "pass",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "fixture": "chenhao_v2",
+      "check": "维度评级:clear_io",
+      "expected": "pass",
+      "actual": "pass",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "fixture": "chenhao",
+      "check": "版本追踪",
+      "expected": "识别出多版本且方向符合预期",
+      "actual": [
+        50,
+        100.0
+      ],
+      "ok": true,
+      "note": "v1→v2 分值应上升（迭代有效）"
+    }
+  ],
+  "regressions": [
+    {
+      "name": "真实提交 lishengdan 应判 5/5 完整",
+      "ok": true,
+      "actual": 5
+    },
+    {
+      "name": "真实提交 lishengdan 无 critical/high 红旗（夹具假密钥不得误报）",
+      "ok": true,
+      "actual": []
+    },
+    {
+      "name": "真实技能包（非 C4 提交）应被判缺失 4 类交付物",
+      "ok": true,
+      "actual": {
+        "c4a-starter": 1,
+        "skill-explainer": 1,
+        "wechat-doc-mapper": 1
+      }
+    },
+    {
+      "name": "确定性：同一输入两次运行结果逐字节一致",
+      "ok": true,
+      "actual": "一致"
+    }
+  ]
+}
